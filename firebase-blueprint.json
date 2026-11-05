@@ -1,0 +1,103 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Student user profile in CampusPulse",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "branch": { "type": "string" },
+        "year": { "type": "string" },
+        "role": { "type": "string", "enum": ["Student", "Senior", "Club Lead"] },
+        "bio": { "type": "string" },
+        "postCount": { "type": "number" },
+        "profileViews": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "name", "email", "role"]
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Student feed updates, queries, and notices",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "maxLength": 300 },
+        "content": { "type": "string", "maxLength": 2000 },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorEmail": { "type": "string" },
+        "authorRole": { "type": "string" },
+        "taggedClub": { "type": "string" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "type": { "type": "string" },
+        "upvotes": { "type": "number" },
+        "upvotedBy": { "type": "array" },
+        "isVerifiedBySenior": { "type": "boolean" },
+        "verifiedBy": { "type": "string" },
+        "commentsCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["title", "authorId", "authorName"]
+    },
+    "Issue": {
+      "title": "Issue",
+      "description": "Reported campus problems and status tracking",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "facilityKey": { "type": "string" },
+        "status": { "type": "string", "enum": ["Reported", "Assigned", "In Progress", "Fixed"] },
+        "reporterId": { "type": "string" },
+        "reporterName": { "type": "string" },
+        "reporterRole": { "type": "string" },
+        "upvotes": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["title", "category", "location", "status", "reporterId"]
+    },
+    "MarketplaceItem": {
+      "title": "MarketplaceItem",
+      "description": "Peer-to-peer textbook and gear listings",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "price": { "type": "number" },
+        "category": { "type": "string" },
+        "condition": { "type": "string" },
+        "description": { "type": "string" },
+        "sellerId": { "type": "string" },
+        "sellerName": { "type": "string" },
+        "sellerRole": { "type": "string" },
+        "sellerContact": { "type": "string" },
+        "sellerLocation": { "type": "string" },
+        "isSold": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["title", "price", "sellerId", "sellerName"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profile with posts count and account profile view counters"
+    },
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/entities/Post" },
+      "description": "Community posts and campus queries"
+    },
+    "/issues/{issueId}": {
+      "schema": { "$ref": "#/entities/Issue" },
+      "description": "Reported campus maintenance and infrastructure issues"
+    },
+    "/marketplace/{itemId}": {
+      "schema": { "$ref": "#/entities/MarketplaceItem" },
+      "description": "Student marketplace listings"
+    }
+  }
+}

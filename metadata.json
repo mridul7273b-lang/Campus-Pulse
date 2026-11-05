@@ -1,0 +1,8 @@
+{
+  "name": "AIT Pune — Campus Vision",
+  "description": "Army Institute of Technology (AIT) Pune — Premier autonomous engineering institution under AWES, permanently affiliated with SPPU. NAAC 'A' Grade, NBA Accredited.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

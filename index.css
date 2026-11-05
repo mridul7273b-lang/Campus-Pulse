@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Palette */
+  --bg-primary: #f6f6f7;
+  --bg-secondary: #ffffff;
+  --bg-elevated: #efeff1;
+  --bg-dark: #0c0d0e;
+  --bg-dark-card: #141618;
+  
+  --text-primary: #0a0b0d;
+  --text-secondary: #565a61;
+  --text-muted: #8c9099;
+  --text-light: #f5f6f8;
+  --text-light-muted: #9fa4af;
+
+  /* Accent Signatures */
+  --accent-magenta: #e60050;
+  --accent-magenta-hover: #c90045;
+  --accent-cyan: #00d2ff;
+  --border-hairline: rgba(10, 11, 13, 0.1);
+  --border-strong: rgba(10, 11, 13, 0.9);
+  --border-dark-mode: rgba(255, 255, 255, 0.12);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif-title: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', 'SF Mono', Consolas, monospace;
+
+  /* Spatial Scales */
+  --radius-sharp: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s ease;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Custom Cursor Elements */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(10, 11, 13, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s var(--transition-smooth), height 0.25s var(--transition-smooth), background-color 0.25s, border-color 0.25s;
+  z-index: 99999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #0a0b0d;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+
+.custom-cursor.active {
+  width: 54px;
+  height: 54px;
+  background-color: rgba(230, 0, 80, 0.15);
+  border-color: var(--accent-magenta);
+}
+
+/* Canvas Ambient Grid Overlay */
+.ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+
+/* Global Container Rules */
+.section-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4vw;
+  position: relative;
+  z-index: 2;
+}
+
+/* Pulsing Badge Dot */
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+@keyframes rotate-slow {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.optic-lens-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(10, 11, 13, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotate-slow 60s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation: marquee-scroll 35s linear infinite;
+  gap: 3rem;
+  padding-left: 2rem;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}

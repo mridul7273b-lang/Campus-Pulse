@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIT PUNE | ON CAMPUS — Campus Problem Triage & Map</title>
+  <meta name="description" content="AIT Pune Campus Triage & Infrastructure Map — Real-time facility ticket pipeline, hostel Wi-Fi mesh telemetry, and transparent resolution tracking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@1,600;1,700;1,900&family=Satisfy&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="editorial-theme">
+
+  <!-- Top Precision Scroll Progress Bar -->
+  <div class="scroll-progress-line" id="scroll-progress-line" aria-hidden="true"></div>
+
+  <!-- Ambient Chromatic Optical Glow Layers -->
+  <div class="ambient-glow-mesh" aria-hidden="true">
+    <div class="glow-orb glow-magenta" id="glow-orb-magenta"></div>
+    <div class="glow-orb glow-amber" id="glow-orb-amber"></div>
+    <div class="glow-orb glow-violet" id="glow-orb-violet"></div>
+  </div>
+
+  <!-- Architectural Lateral Margin Coordinate Rails -->
+  <div class="margin-rail margin-left" aria-hidden="true">
+    <span class="rail-indicator">TRIAGE SECTORS</span>
+    <span class="rail-coord">LAT 18.6011° N</span>
+    <div class="rail-ticks">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <span class="rail-marker">HOSTEL 1-5 MESH</span>
+  </div>
+
+  <div class="margin-rail margin-right" aria-hidden="true">
+    <span class="rail-indicator" id="scroll-percentage-text">00%</span>
+    <span class="rail-coord">LONG 73.8744° E</span>
+    <div class="rail-ticks">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <span class="rail-marker">DIGHI HILLS</span>
+  </div>
+
+  <!-- Canvas Ambient Particle Lattice -->
+  
+
+  <!-- SITE HEADER NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="nav-brand">
+      <a href="index.html" class="brand-link" aria-label="AIT Pune Home">
+        <span class="brand-glyph">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="8" height="8" rx="0"/>
+            <rect x="14" y="2" width="8" height="8" rx="0"/>
+            <rect x="2" y="14" width="8" height="8" rx="0"/>
+            <rect x="14" y="14" width="8" height="8" rx="0"/>
+          </svg>
+        </span>
+        <span class="brand-name">AIT<span class="brand-sub">PUNE</span></span>
+      </a>
+      <span class="status-indicator-badge">
+        
+        <span class="status-text">TRIAGE RADAR ACTIVE</span>
+      </span>
+    </div>
+
+    <nav class="center-nav" aria-label="ON CAMPUS Navigation">
+      <ul class="nav-list">
+        <!-- 1. Feed & Queries -->
+        <li class="nav-item has-dropdown">
+          <a href="index.html" class="nav-link" id="nav-feed">
+            <span>Feed & Queries</span>
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-eyebrow">COMMUNITY STREAM</span>
+              
+            </div>
+            <div class="dropdown-links">
+              <a href="index.html#ON CAMPUS-platform" class="dropdown-link-item">
+                <span class="item-title">All Live Updates</span>
+                <span class="item-sub">Real-time student notices & discussions</span>
+              </a>
+              <a href="index.html#ON CAMPUS-platform" class="dropdown-link-item">
+                <span class="item-title">Study & Lab Queries</span>
+                <span class="item-sub">Urgent exam prep, lab files & DSA help</span>
+              </a>
+              <a href="index.html#ON CAMPUS-platform" class="dropdown-link-item">
+                <span class="item-title">Lost & Found Dispatch</span>
+                <span class="item-sub">Track calculators, ID cards & belongings</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2. Campus Triage & Issues (Active) -->
+        <li class="nav-item has-dropdown">
+          <a href="issues.html" class="nav-link active-pulse" id="nav-triage">
+            <span>Campus Triage</span>
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-eyebrow">INFRASTRUCTURE RESOLUTION</span>
+              
+            </div>
+            <div class="dropdown-links">
+              <a href="#triage-map-section" class="dropdown-link-item">
+                <span class="item-title">Real-Time Triage Map</span>
+                <span class="item-sub">Interactive status for all 5 sectors</span>
+              </a>
+              <a href="#issues-pipeline" class="dropdown-link-item">
+                <span class="item-title">Wi-Fi & Mesh Issues</span>
+                <span class="item-sub">Hostel 1-5 router & bandwidth reports</span>
+              </a>
+              <a href="#report-problem-anchor" class="dropdown-link-item">
+                <span class="item-title">Hostels & Mess Facilities</span>
+                <span class="item-sub">Direct escalation to wardens & mess team</span>
+              </a>
+            </div>
+            <div class="dropdown-footer">
+              <button class="dropdown-cta-btn" onclick="window.OnCampus?.openPostModal('problem')">+ Report Facility Issue</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. Student Marketplace -->
+        <li class="nav-item has-dropdown">
+          <a href="marketplace.html" class="nav-link" id="nav-market">
+            <span>Student Market</span>
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-eyebrow">PEER-TO-PEER EXCHANGE</span>
+              
+            </div>
+            <div class="dropdown-links">
+              <a href="marketplace.html" class="dropdown-link-item">
+                <span class="item-title">Textbooks & Notes</span>
+                <span class="item-sub">Autonomous SPPU engineering reference books</span>
+              </a>
+              <a href="marketplace.html" class="dropdown-link-item">
+                <span class="item-title">Electronics & Monitors</span>
+                <span class="item-sub">Raspberry Pi, Arduino, keyboards & peripherals</span>
+              </a>
+              <a href="marketplace.html" class="dropdown-link-item">
+                <span class="item-title">Hostel Essentials</span>
+                <span class="item-sub">Coolers, kettles, study lamps & mattresses</span>
+              </a>
+            </div>
+            <div class="dropdown-footer">
+              <button class="dropdown-cta-btn" onclick="window.OnCampus?.openPostModal('market')">+ List an Item</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4. Clubs & Guilds -->
+        <li class="nav-item has-dropdown">
+          <a href="clubs.html" class="nav-link" id="nav-clubs">
+            <span>Clubs & Guilds</span>
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-eyebrow">TECHNICAL GUILDS</span>
+              
+            </div>
+            <div class="dropdown-links">
+              <a href="clubs.html" class="dropdown-link-item">
+                <span class="item-title">OSS Club (@oss)</span>
+                <span class="item-sub">Open-source software, Linux & Innerve hackathons</span>
+              </a>
+              <a href="clubs.html" class="dropdown-link-item">
+                <span class="item-title">Robotics & Automation (@robotics)</span>
+                <span class="item-sub">Combat bots, autonomous drones & Robocon</span>
+              </a>
+              <a href="clubs.html" class="dropdown-link-item">
+                <span class="item-title">e-Cell Entrepreneurship (@ecell)</span>
+                <span class="item-sub">Incubation, startup funding & prototype grants</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- 5. Senior Hub -->
+        <li class="nav-item has-dropdown">
+          <a href="seniors.html" class="nav-link" id="nav-seniors">
+            <span>Senior Hub</span>
+            <span class="nav-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-header">
+              <span class="dropdown-eyebrow">PEER MENTORSHIP</span>
+              
+            </div>
+            <div class="dropdown-links">
+              <a href="seniors.html" class="dropdown-link-item">
+                <span class="item-title">Electives Consensus</span>
+                <span class="item-sub">Autonomous course reviews & scoring tips</span>
+              </a>
+              <a href="seniors.html" class="dropdown-link-item">
+                <span class="item-title">Interview Prep Guidelines</span>
+                <span class="item-sub">DSA roadmap & tech assessment benchmarks</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- 6. About AIT -->
+        <li class="nav-item">
+          <a href="about.html" class="nav-link" id="nav-about">About AIT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="contact-pill-btn" onclick="window.OnCampus.openAuthModal('signin')" id="header-auth-btn">
+        Student Portal ↗
+      </button>
+      <button class="contact-pill-btn secondary" onclick="window.OnCampus.openPostModal('problem')" id="header-report-btn">
+        + Report Ticket
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: CAMPUS TRIAGE -->
+    <section class="hero-section" id="hero">
+      <div class="hero-stage">
+        
+        <!-- Prismatic Refraction Visual Container (Antenna Technician Silhouette Theme) -->
+        <div class="hero-visual-wrap" id="hero-lens-container">
+          <img 
+            src="assets/hero_issues.jpg" 
+            alt="Campus Triage — AIT Pune Telemetry Technician & Infrastructure Mesh" 
+            class="hero-optic-img"
+            id="hero-optic-img"
+            loading="eager"
+          />
+          <div class="optic-lens-ring" aria-hidden="true"></div>
+          <div class="optic-coordinate-tag" aria-hidden="true">
+            <span>RADAR: HOSTEL 1-5 MESH</span>
+            <span>BANDWIDTH: 10 GBPS FIBRE</span>
+          </div>
+        </div>
+
+        <!-- Magenta Square Callout Badge -->
+        <a href="#triage-map-section" class="magenta-explore-badge" id="hero-explore-trigger" aria-label="Explore Triage Map">
+          <span class="explore-text">Triage</span>
+          <span class="explore-arrow">↘</span>
+        </a>
+
+        <!-- Giant Architectural Typography Title -->
+        <div class="hero-typography-container">
+          <h1 class="giant-display-title">
+            <span class="title-word" id="hero-campus-title">ON CAMPUS</span>
+            <span class="title-word title-pulse-script" id="hero-pulse-title">Triage</span>
+          </h1>
+          <div class="hero-editorial-meta">
+            <span class="editorial-kicker">REAL-TIME CAMPUS INFRASTRUCTURE & TICKET PIPELINE</span>
+            <p class="editorial-caption">
+              Transparent facility escalation across 5 campus sectors • 100% resolution tracking • Real-time warden notifications
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lower Hero Tri-Column Row -->
+      <div class="hero-lower-grid">
+        
+        <!-- Left Column: Fast Triage Filters -->
+        <div class="service-index-column">
+          <a href="#triage-map-section" onclick="window.OnCampus?.setIssueStatus('Reported')" class="service-item" tabindex="0" style="text-decoration:none; color:inherit;">
+            
+            <div class="service-content">
+              <h2 class="service-title">Reported Tickets</h2>
+              <p class="service-desc">Freshly logged hostel Wi-Fi, water and lab equipment anomalies awaiting admin review</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </a>
+
+          <a href="#triage-map-section" onclick="window.OnCampus?.setIssueStatus('In Progress')" class="service-item" tabindex="0" style="text-decoration:none; color:inherit;">
+            
+            <div class="service-content">
+              <h2 class="service-title">In Progress Dispatch</h2>
+              <p class="service-desc">Actively assigned to campus IT network engineers and maintenance contractors</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </a>
+
+          <a href="#triage-map-section" onclick="window.OnCampus?.setIssueStatus('Fixed')" class="service-item" tabindex="0" style="text-decoration:none; color:inherit;">
+            
+            <div class="service-content">
+              <h2 class="service-title">Resolved & Verified</h2>
+              <p class="service-desc">Closed tickets verified by student body and hostel wardens</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Middle Column: Big Editorial Headline Statement -->
+        <div class="editorial-statement-column">
+          <div class="statement-prefix">ESTABLISHED 1994 · CAMPUS INFRASTRUCTURE</div>
+          <h2 class="editorial-big-text">
+            Transparent, peer-validated facility triage across all 5 sectors
+          </h2>
+          <p class="editorial-sub-text">
+            From the 5 hostel blocks to the Ramanujan computing labs, Campus Triage replaces paper register complaints with real-time Firestore tracking, automated duplicate clustering, and peer upvote bumps.
+          </p>
+          <div class="statement-stats-row">
+            <div class="stat-cell">
+              <span class="stat-number" data-count="100">100%</span>
+              <span class="stat-label">Resolution SLA</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number" data-count="5">5</span>
+              <span class="stat-label">Active Sectors</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number" data-count="24">&lt; 24h</span>
+              <span class="stat-label">Admin Response</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Telemetry Specimen Card -->
+        <div class="optical-specimen-card" id="specimen-card">
+          <div class="specimen-img-wrapper">
+            <img 
+              src="assets/card_lens.jpg" 
+              alt="Telemetry dispersion and network monitoring" 
+              class="specimen-img"
+              id="specimen-img"
+            />
+            <div class="specimen-overlay-glow"></div>
+          </div>
+          <div class="specimen-meta">
+            <div class="specimen-id-row">
+              <span class="specimen-tag">TRIAGE RADAR // MESH</span>
+              <span class="specimen-status">REALTIME FIRESTORE</span>
+            </div>
+            <div class="specimen-desc">
+              Automatic escalation matrix: Tickets with 10+ student bumps are instantly routed to high-priority maintenance dispatch.
+            </div>
+            <button class="specimen-btn" onclick="window.OnCampus?.openPostModal('problem')">
+              <span>+ Log New Ticket ↗</span>
+              <span class="btn-indicator"></span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIVE MESH TICKER -->
+    <section class="live-ticker-band" aria-label="Triage Bulletins">
+      <div class="ticker-badge">TRIAGE RADAR</div>
+      <div class="ticker-marquee-wrapper">
+        <div class="ticker-track">
+          <span class="ticker-item"> <strong>H-3 WI-FI:</strong> Dual-band access points upgraded in Wing B 2nd floor</span>
+          <span class="ticker-item"> <strong>OAT PLAZA:</strong> Water dispenser pressure restored after valve maintenance</span>
+          <span class="ticker-item"> <strong>CENTRAL LIBRARY:</strong> 4th reading hall AC climate sensors re-calibrated</span>
+          <span class="ticker-item"> <strong>NETWORK ENG:</strong> Fiber latency steady at 2.4ms across campus intranet</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN SPATIAL TRIAGE SECTION -->
+    <section class="campuspulse-platform-section oncampus-platform-section" id="triage-map-section" style="padding: 6rem 0 9rem 0;">
+      <div class="section-container">
+        
+        <!-- Platform Header -->
+        <div class="pulse-platform-header">
+          <div class="pulse-header-top">
+            <div>
+              <div class="pulse-kicker">
+                
+                <span>SPATIAL INFRASTRUCTURE TELEMETRY // 5 CAMPUS SECTORS</span>
+              </div>
+              <h2 class="pulse-display-title">Interactive Campus Hotspots & Triage Pipeline</h2>
+              <p class="pulse-lead-caption">
+                Click any campus sector hotspot below to inspect active anomalies or report a new issue directly to the administrative desk.
+              </p>
+            </div>
+
+            <div class="pulse-system-badges">
+              <span class="sys-badge live-connected">
+                
+                <span>FIRESTORE: LIVE SYNC</span>
+              </span>
+              <span class="sys-badge">DIGHI HILLS // 30 ACRES</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Auth State Bar -->
+        <div class="pulse-auth-strip" id="pulse-auth-bar">
+          <!-- Injected via ON CAMPUS.js -->
+        </div>
+
+        <!-- 5 Interactive Spatial Hotspots Grid -->
+        <div class="facilities-hotspot-grid" style="margin-bottom: 3.5rem;">
+          <div class="facility-card-hotspot" onclick="window.OnCampus.filterByFacility('hostel')" style="cursor:pointer;" title="Filter to Hostels & Mess">
+            <div class="fac-icon">🏠</div>
+            <div class="fac-name">Hostels & Mess</div>
+            <div class="fac-status has-issues">Hostel Sector</div>
+          </div>
+          <div class="facility-card-hotspot" onclick="window.OnCampus.filterByFacility('library')" style="cursor:pointer;" title="Filter to Digital Library">
+            <div class="fac-icon">📚</div>
+            <div class="fac-name">Digital Library</div>
+            <div class="fac-status clear">Digital Library</div>
+          </div>
+          <div class="facility-card-hotspot" onclick="window.OnCampus.filterByFacility('labs')" style="cursor:pointer;" title="Filter to Academic & Labs">
+            <div class="fac-icon">🔬</div>
+            <div class="fac-name">Academic & Labs</div>
+            <div class="fac-status clear">Academic Wings</div>
+          </div>
+          <div class="facility-card-hotspot" onclick="window.OnCampus.filterByFacility('sports')" style="cursor:pointer;" title="Filter to Sports & OAT">
+            <div class="fac-icon">⚽</div>
+            <div class="fac-name">Sports & OAT</div>
+            <div class="fac-status has-issues">Sports Complex</div>
+          </div>
+          <div class="facility-card-hotspot" onclick="window.OnCampus.filterByFacility('all')" style="cursor:pointer;" title="Show all campus sectors">
+            <div class="fac-icon">📍</div>
+            <div class="fac-name">All Zones</div>
+            <div class="fac-status clear">View All (Reset)</div>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="pulse-instrument-panel" style="margin-bottom: 2.5rem;">
+          <div class="pulse-filter-strip">
+            <div class="pulse-search-box">
+              <span class="search-icon-fixed">🔍</span>
+              <input 
+                type="text" 
+                id="pulse-search-input" 
+                placeholder="Search issues by keyword (e.g. Wi-Fi, Water, Hostel 3, Lab)..."
+                aria-label="Search triage issues"
+              />
+              <button class="search-clear-btn" id="pulse-search-clear" aria-label="Clear Search">✕</button>
+            </div>
+
+            <div class="filter-chips-row" id="pulse-filter-chips">
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); align-self:center; margin-right:4px;">STATUS:</span>
+              <button class="filter-pill active" data-issue-status="all">All Status</button>
+              <button class="filter-pill" data-issue-status="Reported">Reported</button>
+              <button class="filter-pill" data-issue-status="Assigned">Assigned</button>
+              <button class="filter-pill" data-issue-status="In Progress">In Progress</button>
+              <button class="filter-pill" data-issue-status="Fixed">Fixed ✓</button>
+            </div>
+
+            <button class="dispatch-action-btn" onclick="window.OnCampus.openPostModal('problem')" id="report-problem-anchor">
+              <span>+ Report Campus Problem</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Issues Pipeline Stream Container -->
+        <div id="pulse-issues-stream" class="pulse-issues-stream">
+          <!-- Rendered dynamically by ON CAMPUS.js from Firestore -->
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="f-brand-logo">AIT PUNE</div>
+          <div class="f-brand-tagline">ON CAMPUS Platform • Autonomous AY 25-26</div>
+          <p class="f-desc">
+            Premier engineering institute under AWES. Empowering 2,400+ verified engineering scholars across academics, technical societies, and transparent campus life.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">ON CAMPUS Platform</span>
+          <ul>
+            <li><a href="index.html">Live Feed & Peer Queries</a></li>
+            <li><a href="issues.html">Campus Problem Triage</a></li>
+            <li><a href="marketplace.html">Student Marketplace</a></li>
+            <li><a href="clubs.html">Verified Club Guilds</a></li>
+            <li><a href="seniors.html">Senior Mentorship Hub</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">Campus Direct</span>
+          <ul>
+            <li><a href="https://www.aitpune.com/Admissions.aspx" target="_blank">UG Admissions Desk</a></li>
+            <li><a href="https://www.aitpune.com/Scholarships.aspx" target="_blank">Scholarships & Aid</a></li>
+            <li><a href="https://www.aitpune.com/Anti-Ragging.aspx" target="_blank">Anti-Ragging / ICC</a></li>
+            <li><a href="about.html">About AIT Pune</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">Campus Coordinates</span>
+          <address class="f-address">
+            Army Institute of Technology<br>
+            Dighi Hills, Alandi Road<br>
+            Pune, Maharashtra 411015<br>
+            Phone: 8956018951 / 52 / 53<br>
+            Email: ait@aitpune.edu.in
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="copy-note">
+          © 2026 Army Institute of Technology, Pune. All Rights Reserved.
+        </div>
+        <div class="footer-back-to-top">
+          <a href="#hero" id="back-to-top-btn">Return to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AUTH MODAL -->
+  <div class="pulse-modal-backdrop" id="pulse-auth-modal" aria-hidden="true">
+    <div class="pulse-modal-card">
+      <div class="modal-header-row">
+        <div>
+          <span class="modal-sub-label">AIT PUNE // "ONWARDS TO GLORY"</span>
+          <h3 class="modal-title-main">Student Access</h3>
+        </div>
+        <button class="modal-close-trigger" onclick="window.OnCampus.closeAuthModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-tabs-strip">
+        <button class="modal-tab-pill active" id="auth-tab-signin" onclick="window.OnCampus.switchAuthTab('signin')">Sign In</button>
+        <button class="modal-tab-pill" id="auth-tab-signup" onclick="window.OnCampus.switchAuthTab('signup')">Create Account</button>
+      </div>
+
+      <div class="google-auth-wrapper">
+        <button type="button" class="btn-google-auth" id="btn-google-auth-main" onclick="window.OnCampus.signInWithGoogle()">
+          <svg class="google-svg-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span class="google-btn-text">Continue with Google Account</span>
+        </button>
+        <div class="auth-or-separator">
+          <span class="sep-line"></span>
+          <span class="sep-text">OR COLLEGE EMAIL</span>
+          <span class="sep-line"></span>
+        </div>
+      </div>
+
+      <form id="form-auth-signin">
+        <div class="form-error-banner" id="auth-signin-error" style="display:none;"></div>
+        <div class="form-field-group">
+          <label for="auth-signin-email">College Email Address *</label>
+          <input type="email" id="auth-signin-email" class="form-input-text" placeholder="student@aitpune.edu.in" required>
+        </div>
+        <div class="form-field-group">
+          <label for="auth-signin-pass">Password *</label>
+          <input type="password" id="auth-signin-pass" class="form-input-text" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-solid-dark" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
+          Sign In to ON CAMPUS →
+        </button>
+      </form>
+
+      <form id="form-auth-signup" style="display:none;">
+        <div class="form-error-banner" id="auth-signup-error" style="display:none;"></div>
+        <div class="form-field-group">
+          <label for="auth-signup-name">Full Student Name *</label>
+          <input type="text" id="auth-signup-name" class="form-input-text" placeholder="e.g. Ayush Kaswa" required>
+        </div>
+        <div class="form-field-group">
+          <label for="auth-signup-email">College Email Address *</label>
+          <input type="email" id="auth-signup-email" class="form-input-text" placeholder="ayush_23100@aitpune.edu.in" required>
+        </div>
+        <div class="form-field-grid">
+          <div class="form-field-group">
+            <label for="auth-signup-branch">Branch</label>
+            <select id="auth-signup-branch" class="form-input-select">
+              <option value="Computer Engineering">Computer Engg</option>
+              <option value="Automation & Robotics">Automation & Robotics</option>
+              <option value="Information Technology">Information Tech</option>
+              <option value="Electronics & Telecom">Electronics & Telecom</option>
+              <option value="Mechanical Engineering">Mechanical Engg</option>
+            </select>
+          </div>
+          <div class="form-field-group">
+            <label for="auth-signup-year">Academic Year</label>
+            <select id="auth-signup-year" class="form-input-select">
+              <option value="1st Year">1st Year (FE)</option>
+              <option value="2nd Year">2nd Year (SE)</option>
+              <option value="3rd Year" selected>3rd Year (TE)</option>
+              <option value="Final Year">Final Year (BE)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field-group">
+          <label for="auth-signup-pass">Password (min 6 characters) *</label>
+          <input type="password" id="auth-signup-pass" class="form-input-text" placeholder="••••••••" minlength="6" required>
+        </div>
+        <button type="submit" class="btn-solid-dark" style="width:100%; justify-content:center; padding:0.8rem; margin-top:0.5rem;">
+          Register Student Profile →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- DISPATCH MODAL (PROBLEM REPORTING) -->
+  <div class="pulse-modal-backdrop" id="pulse-post-modal" aria-hidden="true">
+    <div class="pulse-modal-card">
+      <div class="modal-header-row">
+        <div>
+          <span class="modal-sub-label">FACILITY ESCALATION</span>
+          <h3 class="modal-title-main">Report Campus Problem</h3>
+        </div>
+        <button class="modal-close-trigger" onclick="window.OnCampus.closePostModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-tabs-strip four-cols">
+        <button type="button" class="modal-tab-pill post-type-tab active" data-type="problem">Problem</button>
+        <button type="button" class="modal-tab-pill post-type-tab" data-type="help">Query/Help</button>
+        <button type="button" class="modal-tab-pill post-type-tab" data-type="market">Market</button>
+        <button type="button" class="modal-tab-pill post-type-tab" data-type="notice">Notice</button>
+      </div>
+
+      <form id="pulse-create-form">
+        <input type="hidden" id="post-form-type" value="problem">
+        <div class="form-field-group">
+          <label for="post-form-title">Issue Summary *</label>
+          <input type="text" id="post-form-title" class="form-input-text" placeholder="e.g. Hostel 3 Wing B Wi-Fi disconnected" required>
+        </div>
+
+        <div class="form-field-grid" id="post-form-category-row">
+          <div class="form-field-group">
+            <label for="post-form-category">Issue Category</label>
+            <select id="post-form-category" class="form-input-select">
+              <option value="Wi-Fi">Wi-Fi & Mesh</option>
+              <option value="Hostel & Water">Hostel & Water Dispenser</option>
+              <option value="Mess & Food">Mess & Food Hygiene</option>
+              <option value="Labs">Labs & Hardware</option>
+              <option value="Cleanliness">Cleanliness & AC</option>
+            </select>
+          </div>
+          <div class="form-field-group">
+            <label for="post-form-facility">Campus Sector</label>
+            <select id="post-form-facility" class="form-input-select">
+              <option value="hostel">Hostels & Mess</option>
+              <option value="library">Digital Library</option>
+              <option value="labs">Academic & Labs</option>
+              <option value="sports">Sports Complex & OAT</option>
+              <option value="gate">Dighi Gate Plazas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field-group" id="post-form-location-row">
+          <label for="post-form-location">Exact Location / Coordinates</label>
+          <input type="text" id="post-form-location" class="form-input-text" placeholder="e.g. Hostel 3 - 2nd Floor Room 214" required>
+        </div>
+
+        <div class="form-field-group">
+          <label for="post-form-content">Detailed Description *</label>
+          <textarea id="post-form-content" class="form-input-textarea" rows="4" placeholder="Describe the severity, duration, and specific symptoms..." required></textarea>
+        </div>
+
+        <div class="form-checkbox-row">
+          <input type="checkbox" id="post-form-anon">
+          <label for="post-form-anon">Post Anonymously (Hide your student name)</label>
+        </div>
+
+        <button type="submit" class="btn-solid-dark" style="width:100%; justify-content:center; padding:0.85rem; margin-top:0.75rem;">
+          Dispatch Ticket to Campus Admin →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING SCROLL-TO-TOP TELEMETRY HUD -->
+  <button id="scroll-to-top-hud" class="scroll-to-top-hud" aria-label="Return to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <span>↑</span>
+    <span>TOP</span>
+  </button>
+
+  <!-- TOAST NOTIFICATION PILL -->
+  <div class="pulse-toast" id="pulse-toast">
+    
+    <span class="toast-msg">Notification</span>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="oncampus.js"></script>
+</body>
+</html>

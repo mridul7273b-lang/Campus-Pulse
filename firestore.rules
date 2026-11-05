@@ -1,0 +1,82 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // 1. Users collection: Public profiles
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.auth.uid == userId;
+      allow update: if isSignedIn() && (
+        request.auth.uid == userId ||
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['profileViews', 'postCount'])
+      );
+      allow delete: if isOwner(userId);
+    }
+
+    // 2. Posts collection: Community post feed & voting
+    match /posts/{postId} {
+      allow read: if true; // Public feed reading for all visitors & students
+      allow create: if isSignedIn() && 
+        request.resource.data.authorId == request.auth.uid &&
+        request.resource.data.title is string &&
+        request.resource.data.title.size() > 0 &&
+        request.resource.data.content is string &&
+        request.resource.data.content.size() > 0;
+      allow update: if isSignedIn() && (
+        // Post author can edit their own post
+        resource.data.authorId == request.auth.uid ||
+        // Other authenticated users can only toggle upvotes or increment comments count
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['upvotes', 'upvotedBy', 'commentsCount'])
+      );
+      allow delete: if isSignedIn() && resource.data.authorId == request.auth.uid;
+    }
+
+    // 3. Comments collection: Post discussions & replies
+    match /comments/{commentId} {
+      allow read: if true; // Public comments reading
+      allow create: if isSignedIn() &&
+        request.resource.data.authorId == request.auth.uid &&
+        request.resource.data.postId is string &&
+        request.resource.data.postId.size() > 0 &&
+        request.resource.data.content is string &&
+        request.resource.data.content.size() > 0;
+      allow update: if isSignedIn() && resource.data.authorId == request.auth.uid;
+      allow delete: if isSignedIn() && resource.data.authorId == request.auth.uid;
+    }
+
+    // 4. Issues collection: Campus facility incident reporting
+    match /issues/{issueId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.reporterId == request.auth.uid;
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn() && resource.data.reporterId == request.auth.uid;
+    }
+
+    // 5. Marketplace collection: Student buy & sell
+    match /marketplace/{itemId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.sellerId == request.auth.uid;
+      allow update: if isSignedIn() && (
+        resource.data.sellerId == request.auth.uid ||
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['isSold'])
+      );
+      allow delete: if isSignedIn() && resource.data.sellerId == request.auth.uid;
+    }
+
+    // 6. Senior Incubator Projects collection
+    match /projects/{projectId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+    }
+  }
+}

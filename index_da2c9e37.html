@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIT PUNE | Army Institute of Technology — Campus Vision</title>
+  <meta name="description" content="Army Institute of Technology (AIT) Pune — Premier autonomous engineering institution under AWES, permanently affiliated with SPPU. NAAC 'A' Grade, NBA Accredited.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="editorial-theme">
+
+  <!-- Minimalist Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot" aria-hidden="true"></div>
+
+  <!-- Ambient Grid Background Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Sticky / Hero Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="nav-brand">
+      <a href="#hero" class="brand-link" id="brand-logo" aria-label="AIT Pune Home">
+        <span class="brand-glyph">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="8" height="8" rx="1.5"/>
+            <rect x="14" y="2" width="8" height="8" rx="1.5"/>
+            <rect x="2" y="14" width="8" height="8" rx="1.5"/>
+            <rect x="14" y="14" width="8" height="8" rx="1.5"/>
+          </svg>
+        </span>
+        <span class="brand-name">AIT<span class="brand-sub">PUNE</span></span>
+      </a>
+      <span class="status-indicator-badge">
+        <span class="pulse-dot"></span>
+        <span class="status-text">AUTONOMOUS AY 25-26</span>
+      </span>
+    </div>
+
+    <nav class="center-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a href="#academics" class="nav-link" id="nav-academics">Programmes</a></li>
+        <li><a href="#research" class="nav-link" id="nav-research">Research & Labs</a></li>
+        <li><a href="#placements" class="nav-link" id="nav-placements">Placements</a></li>
+        <li><a href="#campus-life" class="nav-link" id="nav-campus">Campus Life</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About AIT</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="contact-pill-btn" id="open-contact-btn" aria-label="Open Admissions & Contact Panel">
+        Contact
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (MATCHING THE EXACT REFERENCE DESIGN) -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Upper Optical Hero Centerpiece -->
+      <div class="hero-stage">
+        
+        <!-- Prismatic Refraction Visual Container -->
+        <div class="hero-visual-wrap" id="hero-lens-container">
+          <img 
+            src="assets/hero_lens.jpg" 
+            alt="Optical Refraction and Precision Engineering Visual at AIT Pune" 
+            class="hero-optic-img"
+            id="hero-optic-img"
+            loading="eager"
+          />
+          <div class="optic-lens-ring" aria-hidden="true"></div>
+          <div class="optic-coordinate-tag" aria-hidden="true">
+            <span>COORD: 18.6011° N, 73.8744° E</span>
+            <span>ELEV: 574M DIGHI HILLS</span>
+          </div>
+        </div>
+
+        <!-- Magenta Callout Square (Exact Match to Reference Image) -->
+        <a href="#campus-tour" class="magenta-explore-badge" id="hero-explore-trigger" aria-label="Explore AIT Pune Campus">
+          <span class="explore-text">Explore</span>
+          <span class="explore-arrow">↗</span>
+        </a>
+
+        <!-- Giant Architectural Typography Title Overlapping Visual -->
+        <div class="hero-typography-container">
+          <h1 class="giant-display-title">
+            <span class="title-word">CAMPUS</span>
+            <span class="title-word">VISION</span>
+            <span class="title-word title-bleed">METRICS</span>
+          </h1>
+          <div class="hero-editorial-meta">
+            <span class="editorial-kicker">Integrated engineering & academic solutions</span>
+            <p class="editorial-caption">
+              Army Institute of Technology, Pune — Permanent SPPU Affiliation • NAAC ‘A’ Grade • NBA Accredited UG Excellence
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lower Hero Tri-Column Row (Exact Match to Reference Image) -->
+      <div class="hero-lower-grid">
+        
+        <!-- Left Column: Technical Service / Division Items -->
+        <div class="service-index-column">
+          <div class="service-item" tabindex="0" data-target="academics">
+            <div class="service-glyph">∫∫</div>
+            <div class="service-content">
+              <h2 class="service-title">Academic Programs</h2>
+              <p class="service-desc">B.Tech, M.Tech & PhD degrees across 6 pioneering engineering divisions</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </div>
+
+          <div class="service-item" tabindex="0" data-target="research">
+            <div class="service-glyph">⌖</div>
+            <div class="service-content">
+              <h2 class="service-title">Research & Incubation</h2>
+              <p class="service-desc">IIC & e-Cell logistics, AI/ML clusters, and DRDO-partnered tech initiatives</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </div>
+
+          <div class="service-item" tabindex="0" data-target="placements">
+            <div class="service-glyph">✦</div>
+            <div class="service-content">
+              <h2 class="service-title">Placement Velocity</h2>
+              <p class="service-desc">96%+ placement average, ₹52 LPA international high, tier-1 tech cohorts</p>
+            </div>
+            <span class="service-link-arrow">→</span>
+          </div>
+        </div>
+
+        <!-- Middle Column: Bold Editorial Headline Statement -->
+        <div class="editorial-statement-column">
+          <div class="statement-prefix">ESTABLISHED 1994 // ONWARDS TO GLORY</div>
+          <h2 class="editorial-big-text">
+            Engineering expertise to support every stage of technological innovation
+          </h2>
+          <p class="editorial-sub-text">
+            Operating under the Army Welfare Education Society (AWES), AIT Pune brings military precision, 
+            academic autonomy, and world-class research facilities together on a tranquil 30-acre campus at Dighi Hills.
+          </p>
+          <div class="statement-stats-row">
+            <div class="stat-cell">
+              <span class="stat-number" data-count="30">30+</span>
+              <span class="stat-label">Years of Pedagogy</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number" data-count="96">96%</span>
+              <span class="stat-label">Placement Index</span>
+            </div>
+            <div class="stat-cell">
+              <span class="stat-number" data-count="52">₹52L</span>
+              <span class="stat-label">Max CTC Offered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Vertical Prismatic Optical Card (Exact Match) -->
+        <div class="optical-specimen-card" id="specimen-card">
+          <div class="specimen-img-wrapper">
+            <img 
+              src="assets/card_lens.jpg" 
+              alt="Spectral optical dispersion specimen card" 
+              class="specimen-img"
+              id="specimen-img"
+            />
+            <div class="specimen-overlay-glow"></div>
+          </div>
+          <div class="specimen-meta">
+            <div class="specimen-id-row">
+              <span class="specimen-tag">SPECIMEN // 02</span>
+              <span class="specimen-status">ACTIVE R&D</span>
+            </div>
+            <div class="specimen-desc">
+              High-Energy Photonics & Automation Lab — Testing optics, PLC sensors, and automated vision pipelines.
+            </div>
+            <button class="specimen-btn" id="inspect-specimen-btn">
+              <span>View Instrumentation Data</span>
+              <span class="btn-indicator"></span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LIVE CAMPUS DISPATCH / NOTICE TICKER -->
+    <section class="live-ticker-band" aria-label="Campus Bulletins">
+      <div class="ticker-badge">LATEST BULLETINS</div>
+      <div class="ticker-marquee-wrapper">
+        <div class="ticker-track">
+          <span class="ticker-item"><span class="ticker-dot"></span> <strong>AUTONOMY:</strong> Autonomous College Status granted from AY 2025-26 by SPPU</span>
+          <span class="ticker-item"><span class="ticker-dot"></span> <strong>AWARDS:</strong> Dr. Rahul Desai honoured with the prestigious COAS Commendation</span>
+          <span class="ticker-item"><span class="ticker-dot"></span> <strong>CONFERENCE:</strong> IEEE International Conference ICNDIA-2026 successfully concluded</span>
+          <span class="ticker-item"><span class="ticker-dot"></span> <strong>RANKINGS:</strong> Recognized in National Green University Ranking (NGUR) 2026</span>
+          <span class="ticker-item"><span class="ticker-dot"></span> <strong>PLACEMENTS:</strong> 2025-26 Placement Season with top recruiters Microsoft, Amazon, Cred & Nvidia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ACADEMIC PROGRAMMES SECTION -->
+    <section class="content-section" id="academics">
+      <div class="section-container">
+        
+        <div class="section-header-block">
+          <div class="section-tag-line">
+            <span class="section-index">01</span>
+            <span class="section-category">UNDERGRADUATE & POSTGRADUATE DISCIPLINES</span>
+          </div>
+          <div class="section-title-row">
+            <h2 class="section-display-h2">Academic Architecture</h2>
+            <div class="filter-switch-group" role="tablist">
+              <button class="filter-tab active" data-filter="all" role="tab">All Divisions</button>
+              <button class="filter-tab" data-filter="ug" role="tab">B.Tech (UG)</button>
+              <button class="filter-tab" data-filter="pg" role="tab">M.Tech & PhD</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dept-grid" id="dept-grid">
+          
+          <!-- Computer Engineering -->
+          <article class="dept-card" data-category="ug">
+            <div class="dept-top">
+              <span class="dept-code">CE-01</span>
+              <span class="dept-badge">NBA ACCREDITED</span>
+            </div>
+            <h3 class="dept-name">Computer Engineering</h3>
+            <p class="dept-summary">
+              Specialized tracks in Distributed Systems, High Performance Computing, Deep Learning, and Cyber-Physical Security.
+            </p>
+            <div class="dept-tech-tags">
+              <span>Cloud Arch</span>
+              <span>AI / ML</span>
+              <span>Algorithms</span>
+              <span>Systems</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Placement Rate</span>
+              </div>
+              <button class="dept-action-btn" data-dept="comp">Curriculum ↗</button>
+            </div>
+          </article>
+
+          <!-- Automation & Robotics -->
+          <article class="dept-card" data-category="ug">
+            <div class="dept-top">
+              <span class="dept-code">ARE-02</span>
+              <span class="dept-badge">INDUSTRY 4.0</span>
+            </div>
+            <h3 class="dept-name">Automation & Robotics</h3>
+            <p class="dept-summary">
+              Next-generation multidisciplinary engineering blending PLC automation, intelligent motion control, sensor fusion, and ROS pipelines.
+            </p>
+            <div class="dept-tech-tags">
+              <span>PLC & SCADA</span>
+              <span>Mechatronics</span>
+              <span>Kinematics</span>
+              <span>Sensor Fusion</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">₹38L</span>
+                <span class="metric-lbl">Top Automation CTC</span>
+              </div>
+              <button class="dept-action-btn" data-dept="robotics">Curriculum ↗</button>
+            </div>
+          </article>
+
+          <!-- Electronics & Telecommunication -->
+          <article class="dept-card" data-category="ug">
+            <div class="dept-top">
+              <span class="dept-code">ETC-03</span>
+              <span class="dept-badge">NBA ACCREDITED</span>
+            </div>
+            <h3 class="dept-name">Electronics & Telecommunication</h3>
+            <p class="dept-summary">
+              Core semiconductor engineering, VLSI chip design, RF communications, digital signal processing, and embedded firmware.
+            </p>
+            <div class="dept-tech-tags">
+              <span>VLSI Design</span>
+              <span>RF & 5G</span>
+              <span>Embedded C</span>
+              <span>Edge AI</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">12+</span>
+                <span class="metric-lbl">Research Labs</span>
+              </div>
+              <button class="dept-action-btn" data-dept="etc">Curriculum ↗</button>
+            </div>
+          </article>
+
+          <!-- Information Technology -->
+          <article class="dept-card" data-category="ug">
+            <div class="dept-top">
+              <span class="dept-code">IT-04</span>
+              <span class="dept-badge">NBA ACCREDITED</span>
+            </div>
+            <h3 class="dept-name">Information Technology</h3>
+            <p class="dept-summary">
+              Modern enterprise software engineering, scalable cloud computing, data structures, and secure networks.
+            </p>
+            <div class="dept-tech-tags">
+              <span>Fullstack</span>
+              <span>Big Data</span>
+              <span>DevOps</span>
+              <span>Cyber Sec</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">98%</span>
+                <span class="metric-lbl">Placement Ratio</span>
+              </div>
+              <button class="dept-action-btn" data-dept="it">Curriculum ↗</button>
+            </div>
+          </article>
+
+          <!-- Mechanical Engineering -->
+          <article class="dept-card" data-category="ug">
+            <div class="dept-top">
+              <span class="dept-code">ME-05</span>
+              <span class="dept-badge">NBA ACCREDITED</span>
+            </div>
+            <h3 class="dept-name">Mechanical Engineering</h3>
+            <p class="dept-summary">
+              Advanced computational mechanics, CAD/CAM simulation, aerodynamics, thermodynamics, and collegiate Formula Student motorsports.
+            </p>
+            <div class="dept-tech-tags">
+              <span>ANSYS / FEA</span>
+              <span>Additive Mfg</span>
+              <span>Thermal Sys</span>
+              <span>Robo-Mech</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">8+</span>
+                <span class="metric-lbl">Prototyping Labs</span>
+              </div>
+              <button class="dept-action-btn" data-dept="mech">Curriculum ↗</button>
+            </div>
+          </article>
+
+          <!-- Postgraduate & PhD Research -->
+          <article class="dept-card highlighted-dept" data-category="pg">
+            <div class="dept-top">
+              <span class="dept-code">PG-06</span>
+              <span class="dept-badge">ADVANCED RESEARCH</span>
+            </div>
+            <h3 class="dept-name">M.Tech & PhD Hub</h3>
+            <p class="dept-summary">
+              Postgraduate programs in Data Science (M.Tech DS), VLSI & Embedded Systems (M.Tech VLSI&ES), and Doctoral PhD research in Computer Engineering.
+            </p>
+            <div class="dept-tech-tags">
+              <span>M.Tech DS</span>
+              <span>M.Tech VLSI</span>
+              <span>PhD Scholar</span>
+              <span>SPPU Recogn.</span>
+            </div>
+            <div class="dept-footer">
+              <div class="dept-metric">
+                <span class="metric-val">80+</span>
+                <span class="metric-lbl">Indexed Papers / Yr</span>
+              </div>
+              <button class="dept-action-btn" data-dept="pg">Curriculum ↗</button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH HUBS & INCUBATION (CELLCARTA INFLUENCED TECHNICAL PRECISION) -->
+    <section class="content-section dark-editorial-accent" id="research">
+      <div class="section-container">
+        
+        <div class="section-header-block light-text">
+          <div class="section-tag-line">
+            <span class="section-index">02</span>
+            <span class="section-category">LABORATORIES & INCUBATION FACILITY</span>
+          </div>
+          <h2 class="section-display-h2">Advanced Research Infrastructure</h2>
+        </div>
+
+        <div class="research-showcase-grid">
+          
+          <div class="research-focus-card">
+            <div class="rf-index">LAB // 01</div>
+            <h3 class="rf-title">High Performance Computing & AI Cluster</h3>
+            <p class="rf-desc">
+              Dedicated GPU nodes for deep neural networks, computer vision, and real-time inference workloads supporting autonomous systems and medical AI.
+            </p>
+            <ul class="rf-specs">
+              <li><span>Architecture:</span> NVIDIA Tensor Core Multi-GPU Nodes</li>
+              <li><span>Affiliation:</span> SPPU Research Centre & Centre of Excellence</li>
+              <li><span>Key Output:</span> 45+ Scopus publications, IEEE conference papers</li>
+            </ul>
+          </div>
+
+          <div class="research-focus-card">
+            <div class="rf-index">LAB // 02</div>
+            <h3 class="rf-title">PLC & Industrial Sensor Integration Lab</h3>
+            <p class="rf-desc">
+              Equipped with industrial PLC controllers, analog sensor interaction benches, SCADA consoles, and smart pneumatic workstations for Industry 4.0.
+            </p>
+            <ul class="rf-specs">
+              <li><span>Hardware:</span> Siemens & Allen-Bradley programmable controllers</li>
+              <li><span>Facility:</span> Automated vision sorting & assembly cells</li>
+              <li><span>Funding:</span> AICTE MODROBS & Institutional Grant</li>
+            </ul>
+          </div>
+
+          <div class="research-focus-card">
+            <div class="rf-index">LAB // 03</div>
+            <h3 class="rf-title">AIT e-Cell & Innovation Council (IIC)</h3>
+            <p class="rf-desc">
+              Recognized incubation ecosystem mentoring student startups from ideation to venture funding, patent drafting, and defence-tech prototypes.
+            </p>
+            <ul class="rf-specs">
+              <li><span>Pre-Incubated Ventures:</span> 24+ Startups in AI, IoT, & Hardware</li>
+              <li><span>Patents:</span> 18+ patents filed and published</li>
+              <li><span>Partners:</span> AWES, SPPU Incubation, Industry Angels</li>
+            </ul>
+          </div>
+
+          <div class="research-focus-card">
+            <div class="rf-index">LAB // 04</div>
+            <h3 class="rf-title">Cisco Networking & Cyber Range</h3>
+            <p class="rf-desc">
+              Enterprise Cisco network switches, hardware firewalls, and cyber range topologies for defensive packet inspection, zero trust architectures, and red-teaming.
+            </p>
+            <ul class="rf-specs">
+              <li><span>Infrastructure:</span> Managed Gigabit Switch Racks & Threat Detectors</li>
+              <li><span>Certifications:</span> Cisco Certified Network Academy Partner</li>
+              <li><span>Research:</span> Secure packet routing and software-defined networks</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PLACEMENTS & CORPORATE ENGAGEMENT METRICS -->
+    <section class="content-section" id="placements">
+      <div class="section-container">
+        
+        <div class="section-header-block">
+          <div class="section-tag-line">
+            <span class="section-index">03</span>
+            <span class="section-category">INDUSTRY COLLABORATION & RECRUITMENT</span>
+          </div>
+          <h2 class="section-display-h2">Placement Trajectory</h2>
+        </div>
+
+        <div class="placement-dashboard">
+          
+          <div class="placement-stat-panel">
+            <div class="hero-stat-box">
+              <span class="big-metric-num">₹52,00,000</span>
+              <span class="big-metric-sub">Peak International / Domestic Annual Package</span>
+            </div>
+
+            <div class="mini-metrics-row">
+              <div class="mini-stat-card">
+                <span class="mini-val">₹14.50 LPA</span>
+                <span class="mini-lbl">Average CTC (Top Branches)</span>
+              </div>
+              <div class="mini-stat-card">
+                <span class="mini-val">96.4%</span>
+                <span class="mini-lbl">Overall Placement Ratio</span>
+              </div>
+              <div class="mini-stat-card">
+                <span class="mini-val">120+</span>
+                <span class="mini-lbl">Visiting Corporate Partners</span>
+              </div>
+            </div>
+
+            <p class="placement-narrative">
+              With recruiters spanning global Silicon Valley giants, premier Indian unicorns, and high-frequency fintech firms, 
+              AIT Pune maintains one of Maharashtra’s most consistent high-yield campus recruitment records.
+            </p>
+          </div>
+
+          <div class="recruiter-matrix-panel">
+            <div class="matrix-heading">NOTABLE RECRUITING PARTNERS</div>
+            <div class="recruiter-pill-grid">
+              <div class="rec-pill">Microsoft</div>
+              <div class="rec-pill">Amazon</div>
+              <div class="rec-pill">Google</div>
+              <div class="rec-pill">NVIDIA</div>
+              <div class="rec-pill">Deutsche Bank</div>
+              <div class="rec-pill">Mastercard</div>
+              <div class="rec-pill">Credit Suisse</div>
+              <div class="rec-pill">Qualcomm</div>
+              <div class="rec-pill">Cred</div>
+              <div class="rec-pill">Zomato</div>
+              <div class="rec-pill">Barclays</div>
+              <div class="rec-pill">Deloitte</div>
+              <div class="rec-pill">TCS Digital</div>
+              <div class="rec-pill">Texas Instruments</div>
+              <div class="rec-pill">Honeywell</div>
+              <div class="rec-pill">Bain & Company</div>
+            </div>
+            
+            <div class="placement-cta-banner">
+              <div>
+                <strong>Looking for the 2026-27 Placement Brochure?</strong>
+                <p>Download comprehensive statistical breakdowns, branch profiles, and past batch CTC percentiles.</p>
+              </div>
+              <a href="https://www.aitpune.com/placement/Placement%20brochure%202026-27.pdf" target="_blank" rel="noopener noreferrer" class="black-action-btn">
+                Brochure PDF ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAMPUS ARCHITECTURE & VIRTUAL EXPLORER -->
+    <section class="content-section" id="campus-tour">
+      <div class="section-container">
+        
+        <div class="section-header-block">
+          <div class="section-tag-line">
+            <span class="section-index">04</span>
+            <span class="section-category">30-ACRE LUSH GREEN ENCLAVE IN DIGHI HILLS</span>
+          </div>
+          <h2 class="section-display-h2">Campus Pulse & Facilities</h2>
+        </div>
+
+        <div class="campus-architecture-feature">
+          <div class="arch-img-holder">
+            <img 
+              src="assets/campus_architecture.jpg" 
+              alt="AIT Pune Modern Campus Architecture with Dighi Hills Backdrop" 
+              class="arch-cover-img"
+              id="arch-cover-img"
+            />
+            <div class="arch-tag-floating">
+              <span class="pin-symbol">📍</span>
+              <span>Dighi Hills, Pune — 30 Acres Institutional Sanctuary</span>
+            </div>
+          </div>
+
+          <div class="arch-features-strip">
+            <div class="arch-feature-cell" data-facility="library">
+              <span class="cell-num">01</span>
+              <h4>Central Digital Library</h4>
+              <p>50,000+ volumes, IEEE Xplore, ScienceDirect e-journals, and 24x7 air-conditioned reading halls.</p>
+            </div>
+            <div class="arch-feature-cell" data-facility="sports">
+              <span class="cell-num">02</span>
+              <h4>Sports Complex & OAT</h4>
+              <p>Synthetic basketball courts, lawn tennis, squash, multi-station gymnasium, and Open Air Amphitheatre.</p>
+            </div>
+            <div class="arch-feature-cell" data-facility="hostel">
+              <span class="cell-num">03</span>
+              <h4>Residential Quarters</h4>
+              <p>100% on-campus residential accommodation for boys and girls with high-speed campus-wide WiFi mesh.</p>
+            </div>
+            <div class="arch-feature-cell" data-facility="green">
+              <span class="cell-num">04</span>
+              <h4>Green Energy Infrastructure</h4>
+              <p>Recognized in National Green University Ranking 2026 with rooftop solar arrays & rainwater harvesting.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAMPUS LIFE & STUDENT CLUBS -->
+    <section class="content-section" id="campus-life">
+      <div class="section-container">
+        
+        <div class="section-header-block">
+          <div class="section-tag-line">
+            <span class="section-index">05</span>
+            <span class="section-category">STUDENT BRANCHES & INNOVATION ECOSYSTEM</span>
+          </div>
+          <h2 class="section-display-h2">Student Culture</h2>
+        </div>
+
+        <div class="clubs-editorial-grid">
+          <div class="club-block">
+            <span class="club-tag">TECH // CODING</span>
+            <h3>Open Source & Coding Club</h3>
+            <p>Hosts hackathons, competitive programming sprints, open-source bootcamps, and algorithmic contests.</p>
+          </div>
+          <div class="club-block">
+            <span class="club-tag">ROBOTICS // MECHATRONICS</span>
+            <h3>Robotics Club (AIT)</h3>
+            <p>Constructs autonomous rovers, combat bots, and drones for national challenges like Robocon.</p>
+          </div>
+          <div class="club-block">
+            <span class="club-tag">INCUBATION // BUSINESS</span>
+            <h3>e-Cell AIT</h3>
+            <p>Drives entrepreneurial mindset, founder keynotes, seed pitch decks, and angel network linkages.</p>
+          </div>
+          <div class="club-block">
+            <span class="club-tag">CULTURE // ARTS</span>
+            <h3>Cultural & Literary Society</h3>
+            <p>Manages inter-college festival 'PACE', annual magazine publications, debating leagues, and music guilds.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT AIT & GOVERNANCE -->
+    <section class="content-section" id="about">
+      <div class="section-container">
+        
+        <div class="about-hero-grid">
+          
+          <div class="about-left-text">
+            <div class="section-tag-line">
+              <span class="section-index">06</span>
+              <span class="section-category">HERITAGE & INSTITUTIONAL VALUES</span>
+            </div>
+            <h2 class="about-headline">
+              Founded on discipline, driven by pioneering technological curiosity.
+            </h2>
+            <div class="about-prose">
+              <p>
+                Established in August 1994 by General B.C. Joshi, PVSM, AVSM, ADC, for the children of serving and retired Indian Army personnel, 
+                Army Institute of Technology (AIT) Pune has evolved into one of India’s foremost centers of engineering education.
+              </p>
+              <p>
+                From Academic Year 2025-26, AIT enters an era of academic autonomy under Savitribai Phule Pune University, enabling 
+                rapid curriculum innovation tailored to quantum computing, deep AI, autonomous robotics, and advanced semiconductor design.
+              </p>
+            </div>
+            <div class="motto-box">
+              <span class="motto-title">INSTITUTIONAL MOTTO</span>
+              <span class="motto-text">"Onwards to Glory"</span>
+            </div>
+          </div>
+
+          <div class="about-right-specs">
+            <div class="spec-table">
+              <div class="spec-row">
+                <span class="spec-k">Governing Body</span>
+                <span class="spec-v">Army Welfare Education Society (AWES)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">University Affiliation</span>
+                <span class="spec-v">Savitribai Phule Pune University (SPPU)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">Academic Status</span>
+                <span class="spec-v">Autonomous College (w.e.f. AY 2025-26)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">Accreditation</span>
+                <span class="spec-v">NAAC 'A' Grade, NBA for all UG Programs</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">Campus Area</span>
+                <span class="spec-v">30 Acres (Eco-certified Green Enclave)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">Campus Location</span>
+                <span class="spec-v">Dighi Hills, Alandi Road, Pune - 411015</span>
+              </div>
+            </div>
+
+            <div class="quick-portals-card">
+              <span class="portal-hdr">INTERNAL QUICK LINKS</span>
+              <div class="portal-btn-row">
+                <a href="https://erp.aitpune.edu.in:8006/" target="_blank" rel="noopener noreferrer">ERP Portal ↗</a>
+                <a href="https://moodle.aitpune.edu.in/" target="_blank" rel="noopener noreferrer">Moodle LMS ↗</a>
+                <a href="https://alumni.aitpune.edu.in" target="_blank" rel="noopener noreferrer">Alumni Network ↗</a>
+                <a href="https://www.aitpune.com/emagazine.aspx" target="_blank" rel="noopener noreferrer">E-Magazine ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EDITORIAL FOOTER (MATCHING CLEAN CONTRAST) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-top-row">
+        <div class="footer-brand-meta">
+          <div class="f-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="2" y="2" width="8" height="8" rx="1.5"/>
+              <rect x="14" y="2" width="8" height="8" rx="1.5"/>
+              <rect x="2" y="14" width="8" height="8" rx="1.5"/>
+              <rect x="14" y="14" width="8" height="8" rx="1.5"/>
+            </svg>
+            <span>AIT PUNE</span>
+          </div>
+          <p class="f-subtext">Army Institute of Technology, Pune — Autonomous College permanently affiliated to Savitribai Phule Pune University.</p>
+          <div class="f-live-clock" id="f-live-clock">PUNE, INDIA: --:--:-- IST</div>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">Programmes</span>
+          <ul>
+            <li><a href="https://www.aitpune.com/Computer-Engg.aspx" target="_blank">Computer Engineering</a></li>
+            <li><a href="https://www.aitpune.com/Automation-Robotics-Engg.aspx" target="_blank">Automation & Robotics</a></li>
+            <li><a href="https://www.aitpune.com/Information-Technology.aspx" target="_blank">Information Technology</a></li>
+            <li><a href="https://www.aitpune.com/Electronics-and-Telecommunication.aspx" target="_blank">Electronics & Telecom</a></li>
+            <li><a href="https://www.aitpune.com/Mechanical-Engg.aspx" target="_blank">Mechanical Engineering</a></li>
+            <li><a href="https://www.aitpune.com/Computer-Engg-ME.aspx" target="_blank">M.Tech Data Science</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">Campus Direct</span>
+          <ul>
+            <li><a href="https://www.aitpune.com/Admissions.aspx" target="_blank">UG Admissions</a></li>
+            <li><a href="https://www.aitpune.com/Placements.aspx" target="_blank">Placement Cell</a></li>
+            <li><a href="https://www.aitpune.com/ResearchNDevelopment.aspx" target="_blank">R&D Initiatives</a></li>
+            <li><a href="https://www.aitpune.com/iic1.aspx" target="_blank">Innovation Cell (IIC)</a></li>
+            <li><a href="https://www.aitpune.com/Scholarships.aspx" target="_blank">Scholarships & Aid</a></li>
+            <li><a href="https://www.aitpune.com/Anti-Ragging.aspx" target="_blank">Anti-Ragging / ICC</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <span class="col-title">Campus Coordinates</span>
+          <address class="f-address">
+            Army Institute of Technology<br>
+            Dighi Hills, Alandi Road<br>
+            Pune, Maharashtra 411015<br>
+            Phone: 8956018951 / 52 / 53<br>
+            Email: ait@aitpune.edu.in
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="copy-note">
+          © 2026 Army Institute of Technology, Pune. All Rights Reserved. Permanent SPPU Affiliation • NAAC 'A' Grade.
+        </div>
+        <div class="footer-back-to-top">
+          <a href="#hero" id="back-to-top-btn">Return to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ADMISSIONS & CONTACT MODAL DRAWER (INVOKED BY CONTACT BUTTON) -->
+  <div class="side-drawer-backdrop" id="contact-drawer-backdrop" aria-hidden="true">
+    <aside class="side-drawer-panel" id="contact-drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-header">
+        <div class="drawer-header-meta">
+          <span class="drawer-pill">CAMPUS ENQUIRY & ADMISSIONS</span>
+          <h3 id="drawer-title">Connect with AIT Pune</h3>
+        </div>
+        <button class="drawer-close-btn" id="close-drawer-btn" aria-label="Close Contact Panel">✕</button>
+      </div>
+
+      <div class="drawer-body">
+        <p class="drawer-intro">
+          Please submit your query or admission inquiry for AY 2026-27. The Academic and Admissions Office at Dighi Hills will respond shortly.
+        </p>
+
+        <form class="drawer-form" id="campus-inquiry-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="form-name">Candidate / Inquirer Name *</label>
+            <input type="text" id="form-name" placeholder="e.g. Lt Col Sharma / Aditi Verma" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Official / Personal Email Address *</label>
+            <input type="email" id="form-email" placeholder="name@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-phone">Mobile / Contact Number *</label>
+            <input type="tel" id="form-phone" placeholder="+91 98765 43210" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-category">Program of Interest</label>
+            <select id="form-category">
+              <option value="ug-comp">B.Tech — Computer Engineering</option>
+              <option value="ug-robotics">B.Tech — Automation & Robotics</option>
+              <option value="ug-it">B.Tech — Information Technology</option>
+              <option value="ug-etc">B.Tech — Electronics & Telecommunication</option>
+              <option value="ug-mech">B.Tech — Mechanical Engineering</option>
+              <option value="pg-ds">M.Tech — Data Science</option>
+              <option value="pg-vlsi">M.Tech — VLSI & Embedded Systems</option>
+              <option value="phd">PhD Doctoral Research</option>
+              <option value="tenders">Institutional Vendor / CFQ Query</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Specific Query or Requirements</label>
+            <textarea id="form-message" rows="4" placeholder="Detail your admission, placement, or campus inquiry..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn" id="submit-inquiry-btn">
+            <span>Dispatch Inquiry</span>
+            <span>→</span>
+          </button>
+          
+          <div class="form-status-alert" id="form-status-alert"></div>
+        </form>
+
+        <div class="drawer-office-info">
+          <h4>Admission Desk Direct</h4>
+          <p>Dighi Hills, Pune-411015 | Helpdesk: 8956018951 / 52 / 53</p>
+          <p>Registrar: ait@aitpune.edu.in</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- CURRICULUM MODAL FOR DEPARTMENT INSPECTION -->
+  <div class="modal-backdrop" id="dept-modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-dept-title">
+      <div class="modal-top">
+        <span class="modal-tag" id="modal-dept-tag">CURRICULUM ARCHITECTURE</span>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <h3 class="modal-title" id="modal-dept-title">Department Name</h3>
+      <p class="modal-desc" id="modal-dept-desc">Department syllabus and overview.</p>
+      
+      <div class="modal-grid-details" id="modal-dept-details">
+        <!-- Injected via script.js -->
+      </div>
+      
+      <div class="modal-footer-btns">
+        <a href="https://www.aitpune.com/" target="_blank" rel="noopener noreferrer" class="btn-outline-modal" id="modal-sppu-link">
+          Official SPPU Syllabus & Scheme ↗
+        </a>
+        <button class="btn-solid-modal" id="modal-inquire-btn">
+          Inquire for this Programme
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
